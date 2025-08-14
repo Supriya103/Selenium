@@ -38,7 +38,7 @@ public class Annotations {
      }
      @Test (priority=1)
      public void verifyPage() {
-    	 System.out.println("page is displayed");pl
+    	 System.out.println("page is displayed");
      }
      @Test (priority=2)
      public void loginTest() throws InterruptedException {
