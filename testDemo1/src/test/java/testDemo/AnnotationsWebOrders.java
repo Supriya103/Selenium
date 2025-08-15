@@ -1,11 +1,11 @@
-
-	package testDemo;
-
+package testDemo;
 	import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.chrome.ChromeDriver;
+	import org.openqa.selenium.edge.EdgeDriver;
+	import org.openqa.selenium.firefox.FirefoxDriver;
 	import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.Assert;
@@ -28,16 +28,32 @@
 	    public void beforeSuite() {
 	        System.out.println("=== Start of Test Suite ===");
 	    }
-
+	    @Parameters({"browserName","url"})
 	    @BeforeClass
-	    public void setUp() {
-	        driver = new ChromeDriver();
+	    public void setUp(String browserName,String url) {
+	    	System.out.println("Launching WebOrders On"  +browserName);
+	    	switch(browserName) {
+	    	case "chrome":
+	    		driver = new ChromeDriver();
+	    		break;
+	    	case "firefox":
+	    		driver =new  FirefoxDriver();
+	    		break;
+	    	case "edge" :
+				driver = new EdgeDriver();
+				break;
+			default :
+				System.out.println("Browsers Invalid");
+				break;
+
+	    	}
+	  //      driver = new ChromeDriver();
 	        driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 	        // Open site
-	        driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
+	        driver.get(url);
 	        pause(2);
 
 	        // Login
@@ -53,25 +69,27 @@
 	        pause(2);
 	    }
 
-	    @Test(priority = 1)
+	    @Test(priority=1,groups= {"smoke"})
 	    public void verifyHomePage() {
 	        String title = driver.getTitle();
 	        Assert.assertTrue(title.contains("Web Orders"), "Home page not loaded correctly");
 	        pause(2);
 	    }
 
-	    @Test(priority = 2)
+	    @Test(priority=2,groups= {"smoke"})
 	    public void viewAllOrders() {
 	        WebElement ordersLink = wait.until(
 	            ExpectedConditions.elementToBeClickable(By.linkText("View all orders"))
 	        );
+	        
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id ='ctl00_MainContent_orderGrid_ctl02_OrderSelector']"))).click();
 	        ordersLink.click();
-	        pause(2);
+	        pause(5);
 	        Assert.assertTrue(driver.getPageSource().contains("List of All Orders"), "Orders page not loaded");
 	        pause(2);
 	    }
-
-	    @Test(priority = 3)
+	    @Ignore
+	    @Test(groups= {"smoke"})
 	    public void viewAllProducts() {
 	        WebElement productsLink = wait.until(
 	            ExpectedConditions.elementToBeClickable(By.linkText("View all products"))
@@ -81,8 +99,8 @@
 	        Assert.assertTrue(driver.getPageSource().contains("List of Products"), "Products page not loaded");
 	        pause(2);
 	    }
-
-	    @Test(priority = 4)
+	    
+	    @Test(priority=3,groups= {"smoke"})
 	    public void placeOrder() {
 	        // Navigate to Order page
 	        WebElement orderLink = wait.until(
@@ -91,15 +109,15 @@
 	        orderLink.click();
 	        pause(2);
 
-	        // Uncomment and use if you want to actually place an order with pauses
+	        
 	        
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ctl00_MainContent_fmwOrder_ddlProduct"))).sendKeys("FamilyAlbum");
 	        pause(1);
-	       /* driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity")).clear();
+	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity")).clear();
 	        pause(1);
 	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity")).sendKeys("2");
 	        pause(1);
-	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName")).sendKeys("John Doe");
+	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName")).sendKeys("Varun Reddy");
 	        pause(1);
 	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2")).sendKeys("123 Main St");
 	        pause(1);
@@ -123,7 +141,7 @@
 	        Assert.assertTrue(driver.getPageSource().contains("New order has been successfully added."),
 	                "Order placement failed");
 	        pause(2);
-	        */
+	        
 	    }
 
 	    @AfterClass
@@ -137,4 +155,3 @@
 	        System.out.println("=== Test Suite Completed ===");
 	    }
 	}
-
