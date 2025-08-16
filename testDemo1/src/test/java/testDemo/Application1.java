@@ -22,21 +22,7 @@ public class Application1 {
 	
 	@BeforeClass
   public void LaunchNewUser( ) {
-//		switch(browserName) {
-//		case "Chrome":
-//			 driver=new ChromeDriver();
-//			 break;
-//		case "Edge":
-//			 driver=new EdgeDriver();
-//			 break;
-//		case "Firefox":
-//			 driver=new FirefoxDriver();
-//			 break;
-//		default:System.out.println("Browser is invalid");
-//			break;	 
-//			 	 
-//		}
-	    //driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 	   driver.manage().window().maximize();
 	  
   }

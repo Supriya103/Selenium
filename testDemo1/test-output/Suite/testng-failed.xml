@@ -2,16 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browserName" value="Chrome"/>
-  <parameter name="url" value="https://demowebshop.tricentis.com/"/>
+  <parameter name="url" value="http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testDemo.Application1">
+      <class name="testDemo.AnnotationsWebOrders">
         <methods>
-          <include name="RegisterNewUser"/>
-          <include name="TearDown"/>
-          <include name="LaunchNewUser"/>
+          <include name="placeOrder"/>
+          <include name="viewAllOrders"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+          <include name="verifyHomePage"/>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
         </methods>
-      </class> <!-- testDemo.Application1 -->
+      </class> <!-- testDemo.AnnotationsWebOrders -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

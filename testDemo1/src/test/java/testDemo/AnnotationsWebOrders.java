@@ -117,7 +117,7 @@ package testDemo;
 	        pause(1);
 	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity")).sendKeys("2");
 	        pause(1);
-	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName")).sendKeys("Varun Reddy");
+	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName")).sendKeys("Miriyala Supriya");
 	        pause(1);
 	        driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2")).sendKeys("123 Main St");
 	        pause(1);
