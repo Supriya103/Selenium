@@ -1,129 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-18T17:04:51 IST" name="Default suite" finished-at="2025-08-18T17:05:27 IST" duration-ms="35398">
+  <suite started-at="2025-08-20T17:27:03 IST" name="Default suite" finished-at="2025-08-20T17:27:06 IST" duration-ms="3686">
     <groups>
     </groups>
-    <test started-at="2025-08-18T17:04:51 IST" name="Default test" finished-at="2025-08-18T17:05:27 IST" duration-ms="35398">
-      <class name="testDemo.SauceLoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:04:51 IST" name="setUp" finished-at="2025-08-18T17:04:55 IST" duration-ms="3752" status="PASS">
+    <test started-at="2025-08-20T17:27:03 IST" name="Default test" finished-at="2025-08-20T17:27:06 IST" duration-ms="3686">
+      <class name="testDemo.DatePickerWithJS">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testDemo.DatePickerWithJS@6c40365c]" started-at="2025-08-20T17:27:03 IST" name="LaunchBrowser" finished-at="2025-08-20T17:27:06 IST" duration-ms="3537" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:04:55 IST" name="loginTest" data-provider="loginData" finished-at="2025-08-18T17:04:56 IST" duration-ms="297" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[success]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="DatePickerJS()[pri:0, instance:testDemo.DatePickerWithJS@6c40365c]" started-at="2025-08-20T17:27:06 IST" name="DatePickerJS" finished-at="2025-08-20T17:27:06 IST" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:04:56 IST" name="tearDown" finished-at="2025-08-18T17:04:59 IST" duration-ms="3251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:04:59 IST" name="setUp" finished-at="2025-08-18T17:05:02 IST" duration-ms="2880" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:02 IST" name="loginTest" data-provider="loginData" finished-at="2025-08-18T17:05:02 IST" duration-ms="270" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[locked_out_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[locked]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:02 IST" name="tearDown" finished-at="2025-08-18T17:05:05 IST" duration-ms="3189" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:05 IST" name="setUp" finished-at="2025-08-18T17:05:08 IST" duration-ms="3150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:08 IST" name="loginTest" data-provider="loginData" finished-at="2025-08-18T17:05:14 IST" duration-ms="5288" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[performance_glitch_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[success]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:14 IST" name="tearDown" finished-at="2025-08-18T17:05:17 IST" duration-ms="3202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:17 IST" name="setUp" finished-at="2025-08-18T17:05:23 IST" duration-ms="6580" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:23 IST" name="loginTest" data-provider="loginData" finished-at="2025-08-18T17:05:24 IST" duration-ms="266" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalid_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[wrong_pass]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testDemo.SauceLoginTest@38afe297]" started-at="2025-08-18T17:05:24 IST" name="tearDown" finished-at="2025-08-18T17:05:27 IST" duration-ms="3213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testDemo.SauceLoginTest -->
+        </test-method> <!-- DatePickerJS -->
+      </class> <!-- testDemo.DatePickerWithJS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -14,7 +14,7 @@
   	</groups>
  
     <classes> 
-      <class name="testDemo.AnnotationsWebOrders"/>
+    <!--    <class name="testDemo.AnnotationsWebOrders"/>-->
     <!-- <methods>
 			<include name="setUp"/>
 					<include name="verifyHomePage"/>
@@ -23,7 +23,8 @@
 					<include name="placeOrder"/>
 
       </methods>--> 
-      
+      <class name="testDemo. SynchronizationAndException"/>
+     
 
     </classes>
   </test> <!-- Test -->
